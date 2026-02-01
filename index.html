@@ -1,14 +1,134 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>web</title>
-    <script type="module" crossorigin src="/Connector/assets/index-D-LvzZE9.js"></script>
-    <link rel="stylesheet" crossorigin href="/Connector/assets/index-Bs3N-ooh.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连接器 - Connector</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .features {
+            margin: 25px 0;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+        .timestamp {
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 连接器 (Connector)</h1>
+        
+        <div class="status success">
+            <strong>✅ 部署成功!</strong><br>
+            应用已成功部署到 GitHub Pages
+        </div>
+        
+        <div class="status info">
+            <strong>ℹ️ 当前状态</strong><br>
+            正在进行功能完善和优化
+        </div>
+        
+        <div class="features">
+            <h2>📋 主要功能模块</h2>
+            <ul class="feature-list">
+                <li>🏠 首页 - 系统概览和导航中心</li>
+                <li>📊 审计管理 - 记录查看和风险预警</li>
+                <li>📱 设备管理 - 合作伙伴和信任设备管理</li>
+                <li>🛡️ 策略管理 - 策略协商和UDF管理</li>
+                <li>📁 资源管理 - 应用系统和沙箱管理</li>
+                <li>🎮 沙箱应用 - 应用列表和详情管理</li>
+                <li>⚙️ 系统管理 - 用户、角色和权限管理</li>
+            </ul>
+        </div>
+        
+        <div class="status warning">
+            <strong>🚧 开发中</strong><br>
+            更多功能正在持续开发和完善中...
+        </div>
+        
+        <div class="timestamp">
+            部署时间: <span id="deployTime"></span>
+        </div>
+    </div>
+
+    <script>
+        // 显示部署时间
+        document.getElementById('deployTime').textContent = new Date().toLocaleString('zh-CN');
+        
+        // 简单的交互效果
+        console.log('🚀 连接器应用已启动');
+        console.log('📅 部署时间:', new Date().toLocaleString());
+        console.log('🔧 当前环境: GitHub Pages');
+        
+        // 添加一些基本的交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature-list li');
+            features.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'all 0.3s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100 + index * 100);
+            });
+        });
+    </script>
+</body>
 </html>
