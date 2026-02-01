@@ -1,4 +1,27 @@
-// 由于文件过大，我们通过更新配置并重新运行GitHub Actions来确保JS文件使用正确的路径
-// 这里放置的是一个占位符，实际的构建过程会在GitHub Actions中生成正确的JS文件
-console.log('Vite application bundle with correct paths for GitHub Pages');
-// 实际的bundle包含了所有React组件和依赖
+/*
+ * 连接器项目主应用入口文件
+ * 构建时间: 2026-02-01
+ * 版本: 0.0.0
+ */
+
+// React 应用启动代码
+import { createRoot } from 'react-dom/client';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+// 创建根节点并渲染应用
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+console.log('🚀 连接器应用已启动');
+console.log('📅 构建时间:', new Date().toLocaleString());
+console.log('🔧 当前环境:', process.env.NODE_ENV || 'development');
