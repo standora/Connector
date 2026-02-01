@@ -1,1 +1,1 @@
-[文件内容过长，此处省略实际的2.7MB压缩JavaScript文件内容]
+这里需要放置实际的JavaScript内容
