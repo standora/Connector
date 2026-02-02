@@ -27,10 +27,7 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <RouteErrorElement />,
     children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
+      { index: true, element: <Home /> },
       // 设备互信与授权
       { path: 'device/trust', element: <TrustManagement /> },
       { path: 'device/auth', element: <AuthManagement /> },
@@ -66,4 +63,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+], { basename: '/Connector' });
