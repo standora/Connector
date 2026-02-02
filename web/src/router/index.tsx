@@ -28,39 +28,24 @@ export const router = createBrowserRouter([
     errorElement: <RouteErrorElement />,
     children: [
       { index: true, element: <Home /> },
-      // 设备互信与授权
       { path: 'device/trust', element: <TrustManagement /> },
       { path: 'device/auth', element: <AuthManagement /> },
       { path: 'device/partner', element: <PartnerManagement /> },
       { path: 'device/partner/:id', element: <PartnerDetail /> },
-      
-      // 开放资源管理
       { path: 'resource/domain', element: <OpenDomainManagement /> },
       { path: 'resource/list', element: <ResourceList /> },
       { path: 'resource/app-system', element: <ApplicationSystemManagement /> },
       { path: 'resource/sandbox', element: <SandboxManagement /> },
-      
-      // 沙盒 APP 管理
       { path: 'sandbox-app/list', element: <SandboxAppList /> },
       { path: 'sandbox-app/detail/:id', element: <SandboxAppDetail /> },
-      
-      // 使用策略管理
       { path: 'policy/negotiation', element: <PolicyNegotiationPage /> },
       { path: 'policy/udf', element: <UdfNegotiationPage /> },
-      
-      // 安全审计管理
       { path: 'audit/warnings', element: <AuditWarnings /> },
       { path: 'audit/records', element: <AuditRecords /> },
-      
-      // 系统管理
       { path: 'system/users', element: <UserManagement /> },
       { path: 'system/roles', element: <RoleManagement /> },
       { path: 'system/permissions', element: <PermissionManagement /> },
-
-      {
-        path: '*',
-        element: <Placeholder title="404 Not Found" />,
-      },
+      { path: '*', element: <Placeholder title="404 Not Found" /> },
     ],
   },
 ], { basename: '/Connector' });
